@@ -18,7 +18,7 @@ function setup(){
         satellites.push(new Planet(random(width), random(height), random(4,6), random(0.4, 1)))
     }
 
-    //Conversion de chaque lettre du  message en array de points, convertis en objets Particle et transmis à l'objet letters
+    //Conversion de chaque lettre du  message en array de points, puis création d'objets Particle aux coordonnées de ces points et transmis à l'objet letters
     message.forEach(function(value, index){
         var points =font.textToPoints(value , (index*75)+windowWidth*0.1, 175, 120)
         var particles = [];
@@ -46,8 +46,8 @@ function draw(){
     for (var letter in letters) {
         if (letters.hasOwnProperty(letter)) {
             for (let i = 0 ; i < letters[letter].length-1 ; i++ ){
-                var pointDisplay = letters[letter][i];
-                var nextPoint = letters[letter][i+1];
+                let pointDisplay = letters[letter][i];
+                let nextPoint = letters[letter][i+1];
                 pointDisplay.show(nextPoint.pos.x, nextPoint.pos.y);
             }
         }
