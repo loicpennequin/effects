@@ -1,0 +1,17 @@
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+canvas {
+    /*background: url('header-bg.png');*/
+    filter: blur(3px) contrast(250%) hue-rotate(20DEG);
+    position: relative;
+    z-index: 1;
+}
+
+#header{
+    background-color: black;
+    height: 300px;
+    overflow: hidden;
+}
