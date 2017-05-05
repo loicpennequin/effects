@@ -8,7 +8,14 @@ Particle.prototype.show = function(dx, dy){
     glow = map(distance, 0, 600, 255, 0);
     noFill();
     strokeWeight(5);
-    stroke(255, glow, glow,  glow );
+    stroke(255, glow, glow, glow );
     line(this.pos.x, this.pos.y, dx, dy)
-    // ellipse(this.pos.x, this.pos.y, 5)
+}
+
+Particle.prototype.showBlack = function(){
+    noStroke();
+    distance = dist(mouseX, mouseY, this.pos.x, this.pos.y);
+    glow = map(distance, 0, 600, 255, 0);
+    fill(0);
+    ellipse(this.pos.x, this.pos.y, 20)
 }

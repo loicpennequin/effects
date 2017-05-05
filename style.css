@@ -4,14 +4,15 @@ html, body{
 }
 
 canvas {
-    /*background: url('header-bg.png');*/
+
     filter: blur(3px) contrast(250%) hue-rotate(20DEG);
     position: relative;
     z-index: 1;
 }
 
 #header{
-    background-color: black;
+    background: url('bg.jpg');
+    /*background-color: black;*/
     height: 300px;
     overflow: hidden;
     margin-top: 50px;
